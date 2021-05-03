@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestor.views.AddFile">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Crear" x:Name="BtnCrear" Clicked="BtnCrear_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Nombre del archivo:" FontSize="Medium" TextColor="{StaticResource colorAccent}"/>
+            <Entry x:Name="NombreArchivo" />
+            <Label Text="Tipo de archivo:" FontSize="Medium" TextColor="{StaticResource colorAccent}"/>
+            <Grid RowDefinitions="50,50,50,50" 
+                  Margin="10"
+                  VerticalOptions="Center"
+                  Padding="20"
+                  >
+                <RadioButton x:Name="rbCarpeta" GroupName="Group1" Grid.Row="0">
+                    <RadioButton.Content>
+                        Carpeta
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton x:Name="rbDocumento" GroupName="Group1" Grid.Row="1">
+                    <RadioButton.Content>
+                        Documento
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton x:Name="rbImagen" GroupName="Group1" Grid.Row="2">
+                    <RadioButton.Content>
+                        Imagen
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton x:Name="rbVideo" GroupName="Group1" Grid.Row="3">
+                    <RadioButton.Content>
+                        Video
+                    </RadioButton.Content>
+                </RadioButton>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestor.views.PageGestor"
+             x:Name="PaginaX">
+    
+
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Text="Agregar" Clicked="AddFileBtn_Clicked" IconImageSource="plus">
+            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content >
+        <ListView x:Name="listaArchivos" HasUnevenRows="True" ItemTapped="listaArchivos_ItemTapped">
+            <ListView.ItemTemplate  >
+                <DataTemplate >
+                    <ViewCell>
+                        
+                        <ViewCell.ContextActions >
+                            
+                            <MenuItem x:Name="BtnDelete" IconImageSource="delete" IsDestructive="True" Clicked="BtnDelete_Clicked" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="15,0" Orientation="Horizontal" >
+                            
+                            <Image Source="{Binding TypeFile}" WidthRequest="40"/>
+                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Id}"/>
+                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Father}"/>
+                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Name}"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
