@@ -6,10 +6,13 @@
     
 
     <ContentPage.ToolbarItems>
-        
-        <ToolbarItem Text="Agregar" Clicked="AddFileBtn_Clicked" IconImageSource="plus">
-            
-        </ToolbarItem>
+
+        <ToolbarItem Text="Agregar" Clicked="AddFileBtn_Clicked" IconImageSource="plus"/>
+
+
+        <ToolbarItem x:Name="BtnOptions" Text="Options" Clicked="BtnOptions_Clicked" IconImageSource="options"/>
+
+
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content >
@@ -25,8 +28,8 @@
                         <StackLayout Padding="15,0" Orientation="Horizontal" >
                             
                             <Image Source="{Binding TypeFile}" WidthRequest="40"/>
-                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Id}"/>
-                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Father}"/>
+                            <!--<Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Id}"/>
+                            <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Father}"/>-->
                             <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Name}"/>
                             
                         </StackLayout>

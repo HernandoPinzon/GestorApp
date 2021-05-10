@@ -41,5 +41,10 @@ namespace Gestor.data
             //return await Connection.QueryAsync<Archivo>("select * FROM Archivo WHERE Father={0}",Father);
             return await Connection.Table<Archivo>().Where(v => v.Father==Father).ToListAsync();
         }
+
+        public async Task<int> EliminarTodoAsync()
+        {
+            return await Connection.DeleteAllAsync<Archivo>();
+        }
     }
 }

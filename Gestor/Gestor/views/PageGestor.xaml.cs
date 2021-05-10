@@ -65,5 +65,11 @@ namespace Gestor.views
                 await DisplayAlert("Informacion", item.ToString(), "ok");
             }
         }
+
+        private async void BtnOptions_Clicked(object sender, EventArgs e)
+        {
+            //a
+            await Navigation.PushAsync(new PageOptions());
+        }
     }
 }

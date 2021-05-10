@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gestor.views.PageOptions">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="ELIMINAR DATOS" Clicked="ToolbarItem_Clicked" />
+
+
+        
+
+
+    </ContentPage.ToolbarItems>
+
+
+
+    <ContentPage.Content >
+        <StackLayout Padding="15,0" Orientation="Vertical">
+
+            <Label Text="Listado de datos:" TextColor="{StaticResource colorAccent} " FontSize="Title"/>
+
+            <ListView x:Name="listaArchivos" HasUnevenRows="True">
+
+                <ListView.ItemTemplate  >
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout Padding="15,0" Orientation="Vertical">
+
+                                <StackLayout Padding="15,0" Orientation="Horizontal" >
+
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="Nombre:"/>
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Name}"/>
+
+
+                                </StackLayout>
+                                <StackLayout Padding="15,0" Orientation="Horizontal" >
+
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="Tipo:"/>
+                                    <Label Text="{Binding TypeFile}" TextColor="{StaticResource colorAccent} " FontSize="Medium"/>
+
+                                </StackLayout>
+                                <StackLayout Padding="15,0" Orientation="Horizontal" >
+
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="Id:"/>
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Id}"/>
+                                </StackLayout>
+                                <!--<StackLayout Padding="15,0" Orientation="Horizontal" >
+
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="Padre:"/>
+                                    <Label TextColor="{StaticResource colorAccent} " FontSize="Medium" Text="{Binding Father}"/>
+
+                                </StackLayout>-->
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+
+    
+</ContentPage>
